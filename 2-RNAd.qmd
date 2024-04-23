@@ -1,0 +1,37 @@
+---
+engine: knitr
+---
+# RNA dynamics {#sec-RNAd}
+In this chapter, we deal with RNA dynamics inside nucleus.
+```{r kineticDiagram, include=TRUE, echo=FALSE}
+DiagrammeR::grViz("
+  digraph graph2 {
+  
+  graph [layout = dot, rankdir = LR]
+  
+  # node definitions with substituted label text
+  node [shape = oval]
+  a [label = '@@1']
+  b [label = '@@2']
+  c [label = '@@3']
+  d [label = '@@4']
+  e [label = '@@5']
+  
+  a -> b [label = 'Transcription ($\\alpha$)']
+  b -> c [label = 'Splicing ($\\beta$)']
+  c -> d [label = 'Export ($\\eta_{u}$)']
+  c -> e [label = 'Decay ($\\gamma_{u}$)']
+  b-> d[label = 'Export($\\eta_{s}$)']
+  b -> e[label = 'Decay ($\\gamma_{s}$)']
+
+  }
+  
+  [1]: 'dsDNA'
+  [2]: 'unspliced RNA'
+  [3]: 'spliced RNA'
+  [4]: 'plasma'
+  [5]: 'null'
+  ",
+  height = 100)
+```
+
