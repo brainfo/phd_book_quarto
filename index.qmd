@@ -36,8 +36,8 @@ knitr::write_bib(c(
 
 ::: {style="text-align: right;"}
 Ruby Jiang 
-Stockholm, Swden  
-Aprilg 2024
+Stockholm, Sweden  
+April 2023
 :::
 
 
